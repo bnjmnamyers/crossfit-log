@@ -4,11 +4,22 @@ import styled from "styled-components"
 const SectionStyled = styled.section`
     display: flex;
     flex-direction: column;
+    width: 80%;
+    max-width: 1000px;
     font: 300 1rem ${props => props.theme.fonts[0]};
-    text-align: center;
+    text-align: left;
+
+    @media screen and (min-width: 1024px) {
+        padding: 32px 16px;
+        box-shadow: 4px 4px 32px rgba(0, 0, 0, 0.33);
+    }
+
+    p,
+    ul {
+        margin-top: 16px;
+    }
 
     .date {
-        font: 500 1.5rem ${props => props.theme.fonts[0]};
     }
 
     .movement-list {
@@ -16,7 +27,6 @@ const SectionStyled = styled.section`
     }
 
     .text {
-        margin: 20px 40px;
         box-sizing: border-box;
     }
 `
@@ -34,7 +44,7 @@ export default function Workout({ workout }) {
     } = workout
     return (
         <SectionStyled id="WOD">
-            <h2 className="date">WOD - {date}</h2>
+            <h2 className="date">Workout of the Day (WOD) - {date}</h2>
             <p className="type">Type:{type}</p>
             <p className="desription__header">Description:</p>
             <p className="description">{description}</p>

@@ -12,7 +12,7 @@ const HeaderStyled = styled.header`
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 20px 0;
+    padding: 20px 32px;
     background-color: rgba(0, 0, 0, 1);
     z-index: 9999;
     box-sizing: border-box;

@@ -13,9 +13,13 @@ const NavStyled = styled.nav`
     max-width: 1420px;
 
     .logo {
-        font: 700 3rem ${props => props.theme.fonts[0]};
+        font: 700 2.5rem ${props => props.theme.fonts[0]};
         color: ${props => props.theme.colors.primary};
         text-decoration: none;
+
+        @media screen and (min-width: 768px) {
+            font-size: 3rem;
+        }
     }
 
     .links {

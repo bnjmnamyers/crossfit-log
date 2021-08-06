@@ -3,7 +3,7 @@ const workout = {
     date: "07/30/21",
     description: "4 Rounds for Weight",
     howIFelt:
-        'Coach Brooklyn told us that she always hits her weight lifting PRs during a workout. I quickly dismissed that by saying, "That\'s not happening today". I had to eat my words. Hitting a PR is always nice. Still not super pleased with my form but much better than where I started. Still dealing with a little tightness/discomfort in the lower left part of my back but back is getting stronger.',
+        'Coach Brooklyn told us that she always hits her weight lifting PRs during a workout. I quickly dismissed that by saying, "That\'s not happening today." I had to eat my words. Hitting a PR is always nice. Still not super pleased with my form but much better than where I started. Still dealing with a little tightness/discomfort in the lower left part of my back but back is getting stronger.',
     isHeroWOD: false,
     movementList: [
         "20 Calorie Bike",

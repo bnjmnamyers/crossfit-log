@@ -13,6 +13,7 @@ import GlobalStyles from "./global-styles"
 
 import Theme from "./theme"
 import Header from "./header"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
     return (
@@ -31,15 +32,7 @@ const Layout = ({ children }) => {
             </Helmet>
             <Header siteTitle={`CrossFit Log`} />
             <main>{children}</main>
-            <footer
-                style={{
-                    marginTop: `2rem`,
-                }}
-            >
-                © {new Date().getFullYear()}, Built with
-                {` `}
-                <a href="https://www.gatsbyjs.com">Gatsby</a>
-            </footer>
+            <Footer />
             <GlobalStyles />
         </Theme>
     )
