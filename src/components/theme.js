@@ -5,7 +5,7 @@ const theme = {
     colors: {
         primary: "#fff",
     },
-    fonts: ["'Oswald', sans-serif"],
+    fonts: ["'Oswald', sans-serif", "'Roboto', sans-serif"],
 }
 
 const Theme = ({ children }) => (

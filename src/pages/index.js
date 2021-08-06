@@ -24,6 +24,10 @@ const IndexStyled = styled.div`
 
     .hero {
     }
+
+    #WOD {
+        margin-top: 60px;
+    }
 `
 
 const IndexPage = ({ size }) => (

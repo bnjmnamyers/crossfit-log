@@ -15,6 +15,7 @@ const HeaderStyled = styled.header`
     padding: 20px 0;
     background-color: rgba(0, 0, 0, 1);
     z-index: 9999;
+    box-sizing: border-box;
 
     @media screen and (min-width: 1024px) {
         background-color: rgba(0, 0, 0, 0.75);

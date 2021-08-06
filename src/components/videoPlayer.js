@@ -7,8 +7,7 @@ const VideoContainerStyled = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.33);
+    width: 100%;
     overflow: hidden;
     z-index: 9990;
 

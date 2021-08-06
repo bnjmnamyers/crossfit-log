@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
                     crossorigin
                 />
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Roboto&display=swap"
                     rel="stylesheet"
                 />
             </Helmet>
