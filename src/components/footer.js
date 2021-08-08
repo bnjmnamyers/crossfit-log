@@ -20,7 +20,11 @@ const FooterStyled = styled.footer`
 export default function Footer() {
     return (
         <FooterStyled>
-            <a href="https://www.instagram.com/bnjmnmyers" target="_blank">
+            <a
+                href="https://www.instagram.com/bnjmnmyers"
+                target="_blank"
+                rel="noreferrer"
+            >
                 <svg
                     aria-hidden="true"
                     focusable="false"

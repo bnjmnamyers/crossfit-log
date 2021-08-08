@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { withSize } from "react-sizeme"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -78,6 +78,7 @@ const IndexPage = ({ size }) => (
                     width="100%"
                     height="785"
                     loading="lazy"
+                    title="My CrossFit Gym Location (Mossy Creek Fitness"
                 ></iframe>
             </section>
         </IndexStyled>
