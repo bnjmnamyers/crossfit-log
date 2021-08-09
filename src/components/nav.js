@@ -3,6 +3,8 @@ import styled from "styled-components"
 
 import scrollTo from "gatsby-plugin-smoothscroll"
 
+import { Link as SmoothLink } from "react-scroll"
+
 import { Link } from "gatsby"
 
 const NavStyled = styled.nav`
@@ -24,12 +26,10 @@ const NavStyled = styled.nav`
 
     .links {
         display: flex;
-        justify-content: space-between;
+        align-items: center;
 
-        button {
+        a {
             margin: 0 20px;
-            background: none;
-            border: none;
             color: ${props => props.theme.colors.primary};
             font: 500 1.2rem ${props => props.theme.fonts[0]};
 
@@ -50,8 +50,24 @@ export default function Nav({ siteTitle }) {
                 </Link>
             </h1>
             <section className="links">
-                <button onClick={() => scrollTo("#WOD")}>WOD</button>
-                <button onClick={() => scrollTo("#about")}>ABOUT</button>
+                <SmoothLink
+                    to="WOD"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-111}
+                >
+                    WOD
+                </SmoothLink>
+                <SmoothLink
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-111}
+                >
+                    ABOUT
+                </SmoothLink>
             </section>
         </NavStyled>
     )
