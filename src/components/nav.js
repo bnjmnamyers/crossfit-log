@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import scrollTo from "gatsby-plugin-smoothscroll"
-
 import { Link as SmoothLink } from "react-scroll"
 
 import { Link } from "gatsby"
