@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import SectionTitle from "./sectionTitle"
+
 const SectionStyled = styled.section`
     display: flex;
     flex-direction: column;
@@ -44,7 +46,7 @@ export default function Workout({ workout }) {
     } = workout
     return (
         <SectionStyled id="WOD">
-            <h2 className="date">Workout of the Day (WOD) - {date}</h2>
+            <SectionTitle title={`Workout of the Day (WOD) - ${date}`} />
             <p className="type">Type:{type}</p>
             <p className="desription__header">Description:</p>
             <p className="description">{description}</p>
