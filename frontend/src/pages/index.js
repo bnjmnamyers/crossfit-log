@@ -9,13 +9,13 @@ import Seo from "../components/seo"
 import FailedBS from "../images/failed-bs.mp4"
 
 import Counter from "../components/counter"
-import Pr from "../components/pr"
 import SectionTitle from "../components/sectionTitle"
 import VideoPlayer from "../components/videoPlayer"
 import Workout from "../components/workout"
 
 import workoutData from "../../data/workoutData"
 import prData from "../../data/prData"
+import PersonalRecords from "../components/personal-records/personalRecords"
 
 const IndexStyled = styled.div`
     display: flex;
@@ -31,20 +31,6 @@ const IndexStyled = styled.div`
         margin-top: 60px;
     }
 
-    #personal-records {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 100%;
-        max-width: 1440px;
-        margin-top: 80px;
-
-        ul {
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-
     #about {
         display: flex;
         flex-direction: column;
@@ -54,10 +40,6 @@ const IndexStyled = styled.div`
         background-color: #000;
         color: #fff;
         box-sizing: border-box;
-
-        h2:after {
-            border: 8px solid #fff;
-        }
     }
 
     #where-i-wod {
@@ -82,14 +64,9 @@ const IndexPage = ({ size }) => (
                 title="Failure teaches us what we need to know in order to move forward"
             />
             <Workout workout={workoutData} />
-            <section id="personal-records">
-                <SectionTitle title="My PRs" />
-                {prData.map((pr, index) => {
-                    return <Pr pr={pr} key={index} />
-                })}
-            </section>
+            <PersonalRecords isInverted={true} prData={prData} />
             <section id="about">
-                <SectionTitle title="My CrossFit Journey" />
+                <SectionTitle isInverted={true} title="My CrossFit Journey" />
                 <Counter />
             </section>
             <section id="where-i-wod">

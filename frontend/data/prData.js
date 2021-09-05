@@ -6,7 +6,7 @@ const PRs = [
     },
     {
         date: "2021-08-11",
-        result: "375",
+        result: "405",
         title: "Deadlift",
     },
     {

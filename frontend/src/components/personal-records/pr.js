@@ -7,6 +7,8 @@ const PRStyled = styled.article`
     width: 66%;
     margin-top: 24px;
     padding: 16px;
+    color: #000;
+    background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 

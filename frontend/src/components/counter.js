@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import moment from "moment"
+import "moment-precise-range-plugin"
 
 const CounterStyled = styled.section``
 
