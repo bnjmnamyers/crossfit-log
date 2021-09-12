@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
+import useGlobal from "../../store"
 
 import Pr from "./pr"
 import SectionTitle from "../../components/sectionTitle"
@@ -20,13 +21,20 @@ const PersonalRecordsStyled = styled.section`
 `
 
 export default function PersonalRecords({ prData }) {
+    const [globalState, globalActions] = useGlobal()
+    const { prs } = globalState
+    useEffect(() => {
+        globalActions.prContent.getPRs()
+    }, [])
+    console.log(globalState.prs.data)
     return (
         <PersonalRecordsStyled>
             <SectionTitle title="My PRs" />
             <section id="pr-list">
-                {prData.map((pr, index) => {
-                    return <Pr pr={pr} key={index} />
-                })}
+                {prs.data &&
+                    prs.data.map((pr, index) => {
+                        return <Pr pr={pr} key={index} />
+                    })}
             </section>
         </PersonalRecordsStyled>
     )

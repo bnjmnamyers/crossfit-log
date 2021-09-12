@@ -38,8 +38,8 @@ export default function Workout({ workout }) {
         coachedBy,
         date,
         description,
-        howIFelt,
         movementList,
+        reflection,
         results,
         text,
         type,
@@ -60,7 +60,7 @@ export default function Workout({ workout }) {
             <p className="text">{text}</p>
             <p>Results: {results}</p>
             <p>Coached By: {coachedBy}</p>
-            <p>How I Felt: {howIFelt}</p>
+            <p>Reflection: {reflection}</p>
         </SectionStyled>
     )
 }

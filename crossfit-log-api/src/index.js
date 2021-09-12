@@ -6,8 +6,8 @@ const PR = require("./models/pr")
 
 const app = express()
 const port = process.env.PORT || 2418
-
-app.use(express.json())
+var cors = require("cors")
+app.use(cors())
 
 app.post("/wods", (req, res) => {
     const wod = new WOD(req.body)
@@ -18,6 +18,16 @@ app.post("/wods", (req, res) => {
         })
         .catch(error => {
             res.status(400).send(error)
+        })
+})
+
+app.get("/wods", (req, res) => {
+    WOD.find({})
+        .then(wods => {
+            res.send(wods)
+        })
+        .catch(error => {
+            res.status(500).send(error)
         })
 })
 
@@ -36,6 +46,7 @@ app.post("/prs", (req, res) => {
 app.get("/prs", (req, res) => {
     PR.find({})
         .then(prs => {
+            console.log(prs)
             res.send(prs)
         })
         .catch(error => {
