@@ -4,8 +4,8 @@ import * as actions from "../actions"
 
 const initialState = {
     status: "INITIAL",
+    latestWod: {},
     prs: [],
-    wod: {},
     pastWods: [],
 }
 

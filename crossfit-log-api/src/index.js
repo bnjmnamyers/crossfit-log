@@ -7,7 +7,20 @@ const PR = require("./models/pr")
 const app = express()
 const port = process.env.PORT || 2418
 var cors = require("cors")
-app.use(cors())
+app.use(cors(), express.json())
+
+app.get("/latestWod", async (req, res) => {
+    try {
+        const wod = await WOD.find().sort({ $natural: -1 }).limit(1)
+        if (!wod) {
+            return res.status(404).send()
+        }
+
+        res.send(wod[0])
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
 
 app.post("/wods", (req, res) => {
     const wod = new WOD(req.body)

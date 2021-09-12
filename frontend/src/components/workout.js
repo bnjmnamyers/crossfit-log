@@ -34,6 +34,7 @@ const SectionStyled = styled.section`
 `
 
 export default function Workout({ workout }) {
+    console.log(workout)
     const {
         coachedBy,
         date,

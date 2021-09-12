@@ -6,12 +6,11 @@ export const getPRs = async (store, request = axios) => {
     store.setState({ status })
 
     try {
-        const prs = await request.get(`http://localhost:2418/prs`)
-        status = "SUCCESS"
-        store.setState({ status, prs })
-        console.log("/----------------PRs----------------/")
-        console.log(prs)
-        console.log("/----------------PRs----------------/")
+        const prs = await request.get(`${apiBaseURL}/prs`)
+        if (prs.data.length) {
+            status = "SUCCESS"
+            store.setState({ status, prs })
+        }
     } catch (error) {
         console.log(error)
     }

@@ -20,13 +20,12 @@ const PersonalRecordsStyled = styled.section`
     }
 `
 
-export default function PersonalRecords({ prData }) {
+export default function PersonalRecords() {
     const [globalState, globalActions] = useGlobal()
     const { prs } = globalState
     useEffect(() => {
         globalActions.prContent.getPRs()
     }, [])
-    console.log(globalState.prs.data)
     return (
         <PersonalRecordsStyled>
             <SectionTitle title="My PRs" />

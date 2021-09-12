@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
 import { withSize } from "react-sizeme"
+import useGlobal from "../store"
 // import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -55,6 +56,12 @@ const IndexStyled = styled.div`
 `
 
 const IndexPage = ({ size }) => {
+    const [globalState, globalActions] = useGlobal()
+    const { latestWod } = globalState
+
+    useEffect(() => {
+        globalActions.wodContent.getLatestWod()
+    }, [])
     return (
         <Layout>
             <IndexStyled>
@@ -64,8 +71,8 @@ const IndexPage = ({ size }) => {
                     video={FailedBS}
                     title="Failure teaches us what we need to know in order to move forward"
                 />
-                <Workout workout={workoutData} />
-                <PersonalRecords isInverted={true} prData={prData} />
+                {latestWod.data ? <Workout workout={latestWod.data} /> : null}
+                <PersonalRecords isInverted={true} />
                 <section id="about">
                     <SectionTitle
                         isInverted={true}

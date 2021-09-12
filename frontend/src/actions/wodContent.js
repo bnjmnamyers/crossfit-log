@@ -1,6 +1,12 @@
 import axios from "axios"
+const apiBaseURL = process.env.API_BASE_URL
 
-export const getPRs = async (store, request = axios) => {
+export const getLatestWod = async (store, request = axios) => {
     let status = "LOADING"
-    store.setState({ status })
+    const latestWod = await request.get(`${apiBaseURL}/latestWod`)
+    if (latestWod.data) {
+        console.log(latestWod.data)
+        status = "SUCCESS"
+        store.setState({ status, latestWod })
+    }
 }
