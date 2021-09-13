@@ -10,7 +10,7 @@ const MyCrossFitJourneyStyled = styled.section`
     width: 100%;
     margin-top: 80px;
     padding: 32px;
-    background-color: #000;
+    background-color: #333;
     color: #fff;
     box-sizing: border-box;
 
