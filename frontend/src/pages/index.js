@@ -9,13 +9,11 @@ import Seo from "../components/seo"
 
 import FailedBS from "../images/failed-bs.mp4"
 
-import Counter from "../components/counter"
+import MyCrossFitJourney from "../components/myCrossFitJourney"
 import SectionTitle from "../components/sectionTitle"
 import VideoPlayer from "../components/videoPlayer"
 import Workout from "../components/workout"
 
-import workoutData from "../../data/workoutData"
-import prData from "../../data/prData"
 import PersonalRecords from "../components/personal-records/personalRecords"
 
 const IndexStyled = styled.div`
@@ -30,17 +28,6 @@ const IndexStyled = styled.div`
 
     #WOD {
         margin-top: 60px;
-    }
-
-    #about {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 80px;
-        padding: 32px;
-        background-color: #000;
-        color: #fff;
-        box-sizing: border-box;
     }
 
     #where-i-wod {
@@ -71,15 +58,9 @@ const IndexPage = ({ size }) => {
                     video={FailedBS}
                     title="Failure teaches us what we need to know in order to move forward"
                 />
-                {latestWod.data ? <Workout workout={latestWod.data} /> : null}
                 <PersonalRecords isInverted={true} />
-                <section id="about">
-                    <SectionTitle
-                        isInverted={true}
-                        title="My CrossFit Journey"
-                    />
-                    <Counter />
-                </section>
+                <MyCrossFitJourney className="about" />
+                {latestWod.data ? <Workout workout={latestWod.data} /> : null}
                 <section id="where-i-wod">
                     <SectionTitle title="Where I WOD" />
                     <iframe

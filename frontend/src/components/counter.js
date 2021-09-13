@@ -15,7 +15,6 @@ export default function Counter() {
         return diff
     }
     useEffect(() => {
-        // dateDifference()
         const timer = setTimeout(() => {
             setCounter(dateDifference())
         }, 1000)
@@ -24,7 +23,7 @@ export default function Counter() {
     })
     return (
         <CounterStyled>
-            <p>{counter}</p>
+            <p>I've now been happily doing CrossFit for {counter}</p>
         </CounterStyled>
     )
 }

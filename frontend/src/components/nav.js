@@ -49,15 +49,6 @@ export default function Nav({ siteTitle }) {
             </h1>
             <section className="links">
                 <SmoothLink
-                    to="WOD"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    offset={-111}
-                >
-                    WOD
-                </SmoothLink>
-                <SmoothLink
                     to="about"
                     spy={true}
                     smooth={true}
@@ -65,6 +56,15 @@ export default function Nav({ siteTitle }) {
                     offset={-111}
                 >
                     ABOUT
+                </SmoothLink>
+                <SmoothLink
+                    to="WOD"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-111}
+                >
+                    WOD
                 </SmoothLink>
             </section>
         </NavStyled>
