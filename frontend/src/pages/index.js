@@ -26,6 +26,15 @@ const IndexStyled = styled.div`
         margin-top: 0;
     }
 
+    #about__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 80px;
+        background-color: #333;
+    }
+
     #WOD {
         margin-top: 60px;
     }
@@ -59,7 +68,9 @@ const IndexPage = ({ size }) => {
                     title="Failure teaches us what we need to know in order to move forward"
                 />
                 <PersonalRecords isInverted={true} />
-                <MyCrossFitJourney className="about" />
+                <div id="about__wrapper">
+                    <MyCrossFitJourney className="about" />
+                </div>
                 {latestWod.data ? <Workout workout={latestWod.data} /> : null}
                 <section id="where-i-wod">
                     <SectionTitle title="Where I WOD" />

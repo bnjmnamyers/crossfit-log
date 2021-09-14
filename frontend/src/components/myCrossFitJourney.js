@@ -8,7 +8,7 @@ const MyCrossFitJourneyStyled = styled.section`
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 80px;
+    max-width: 1440px;
     padding: 32px;
     background-color: #333;
     color: #fff;

@@ -7,10 +7,10 @@ require("dotenv").config({
 
 module.exports = {
     siteMetadata: {
-        title: `Gatsby Default Starter`,
-        description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-        author: `@gatsbyjs`,
-        siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+        title: `Benjamin Myers CrossFit Log`,
+        description: `Keep up with my journey through CrossFit. Watch as I navigate the ups and downs of pushing myself to do new things.`,
+        author: `Benjamin Myers`,
+        siteUrl: `https://www.benjaminmyers.com/`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,

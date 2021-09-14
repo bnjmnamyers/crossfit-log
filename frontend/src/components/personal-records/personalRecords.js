@@ -13,6 +13,8 @@ const PersonalRecordsStyled = styled.section`
     width: 100%;
     max-width: 1440px;
     margin-top: 80px;
+    padding: 0 32px;
+    box-sizing: border-box;
 
     #pr-list {
         display: flex;

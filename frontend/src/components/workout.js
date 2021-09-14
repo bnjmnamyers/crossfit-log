@@ -12,8 +12,9 @@ const SectionStyled = styled.section`
     text-align: left;
 
     @media screen and (min-width: 1024px) {
-        padding: 32px 16px;
+        padding: 32px 32px;
         box-shadow: 4px 4px 32px rgba(0, 0, 0, 0.33);
+        box-sizing: border-box;
     }
 
     p,
