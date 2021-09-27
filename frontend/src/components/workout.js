@@ -35,15 +35,15 @@ const SectionStyled = styled.section`
 `
 
 export default function Workout({ workout }) {
-    console.log(workout)
     const {
         coachedBy,
         date,
         description,
+        instructions,
         movementList,
+        name,
         reflection,
         results,
-        text,
         type,
     } = workout
     return (
@@ -59,7 +59,7 @@ export default function Workout({ workout }) {
                     </li>
                 ))}
             </ul>
-            <p className="text">{text}</p>
+            <p className="text">{instructions}</p>
             <p>Results: {results}</p>
             <p>Coached By: {coachedBy}</p>
             <p>Reflection: {reflection}</p>

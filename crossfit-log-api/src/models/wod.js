@@ -16,6 +16,10 @@ const WOD = mongoose.model("WOD", {
         trim: true,
         required: true,
     },
+    instructions: {
+        type: String,
+        trim: true,
+    },
     isHeroWOD: {
         type: Boolean,
         default: false,
@@ -36,10 +40,6 @@ const WOD = mongoose.model("WOD", {
     results: {
         type: String,
         required: true,
-        trim: true,
-    },
-    text: {
-        type: String,
         trim: true,
     },
     type: {

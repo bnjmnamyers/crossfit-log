@@ -31,7 +31,6 @@ const IndexStyled = styled.div`
         align-items: center;
         justify-content: center;
         width: 100%;
-        margin-top: 80px;
         background-color: #333;
     }
 
@@ -49,6 +48,15 @@ const IndexStyled = styled.div`
             overflow: hidden;
         }
     }
+
+    #pr__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 32px 0;
+        background-color: #333;
+    }
 `
 
 const IndexPage = ({ size }) => {
@@ -56,6 +64,7 @@ const IndexPage = ({ size }) => {
     const { latestWod } = globalState
 
     useEffect(() => {
+        console.log(globalState)
         globalActions.wodContent.getLatestWod()
     }, [])
     return (
@@ -67,11 +76,10 @@ const IndexPage = ({ size }) => {
                     video={FailedBS}
                     title="Failure teaches us what we need to know in order to move forward"
                 />
-                <PersonalRecords isInverted={true} />
+                {latestWod.data ? <Workout workout={latestWod.data} /> : null}
                 <div id="about__wrapper">
                     <MyCrossFitJourney className="about" />
                 </div>
-                {latestWod.data ? <Workout workout={latestWod.data} /> : null}
                 <section id="where-i-wod">
                     <SectionTitle title="Where I WOD" />
                     <iframe
@@ -83,6 +91,9 @@ const IndexPage = ({ size }) => {
                         title="My CrossFit Gym Location (Mossy Creek Fitness)"
                     ></iframe>
                 </section>
+                <div id="pr__wrapper">
+                    <PersonalRecords isInverted={true} />
+                </div>
             </IndexStyled>
         </Layout>
     )

@@ -49,7 +49,16 @@ export default function Nav({ siteTitle }) {
             </h1>
             <section className="links">
                 <SmoothLink
-                    to="about"
+                    to="WOD"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-111}
+                >
+                    WOD
+                </SmoothLink>
+                <SmoothLink
+                    to="about__wrapper"
                     spy={true}
                     smooth={true}
                     duration={500}
@@ -58,13 +67,22 @@ export default function Nav({ siteTitle }) {
                     ABOUT
                 </SmoothLink>
                 <SmoothLink
-                    to="WOD"
+                    to="where-i-wod"
                     spy={true}
                     smooth={true}
                     duration={500}
                     offset={-111}
                 >
-                    WOD
+                    MY BOX
+                </SmoothLink>
+                <SmoothLink
+                    to="pr__wrapper"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-111}
+                >
+                    PRs
                 </SmoothLink>
             </section>
         </NavStyled>

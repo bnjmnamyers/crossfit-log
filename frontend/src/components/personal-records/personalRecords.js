@@ -12,7 +12,6 @@ const PersonalRecordsStyled = styled.section`
     flex-wrap: wrap;
     width: 100%;
     max-width: 1440px;
-    margin-top: 80px;
     padding: 0 32px;
     box-sizing: border-box;
 
@@ -22,7 +21,7 @@ const PersonalRecordsStyled = styled.section`
     }
 `
 
-export default function PersonalRecords() {
+export default function PersonalRecords({ isInverted }) {
     const [globalState, globalActions] = useGlobal()
     const { prs } = globalState
     useEffect(() => {
@@ -30,7 +29,7 @@ export default function PersonalRecords() {
     }, [])
     return (
         <PersonalRecordsStyled>
-            <SectionTitle title="My PRs" />
+            <SectionTitle isInverted title="My PRs" />
             <section id="pr-list">
                 {prs.data &&
                     prs.data.map((pr, index) => {

@@ -4,6 +4,7 @@ import * as actions from "../actions"
 
 const initialState = {
     status: "INITIAL",
+    formData: {},
     latestWod: {},
     prs: [],
     pastWods: [],
